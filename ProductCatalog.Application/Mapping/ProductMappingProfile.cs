@@ -8,9 +8,16 @@ namespace ProductCatalog.Application.Mapping
     {
         public ProductMappingProfile()
         {
-            CreateMap<Product, ProductDto>();
-            CreateMap<ProductDto, Product>()
-                .ConstructUsing(dto => new Product(dto.Name, dto.Description, dto.Price, dto.Stock, dto.Category));
+            CreateMap<Product, ProductDto>(); 
+            CreateMap<Product, AddProductDto>().ReverseMap( )
+           
+        .ConstructUsing(dto => Product.Create(
+            dto.Name,
+            dto.Description,
+            dto.Price,
+            dto.Stock,
+            dto.Category
+        ));
         }
     }
 }

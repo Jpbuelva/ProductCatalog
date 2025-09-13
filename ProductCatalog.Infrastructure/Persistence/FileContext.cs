@@ -16,9 +16,22 @@ public class FileContext
             JsonSerializer.Deserialize<List<Product>>(json) ?? new List<Product>();
     }
 
-    public async Task SaveAsync(List<Product> products)
+    public async Task<string> SaveAsync(List<Product> products)
     {
-        var json = JsonSerializer.Serialize(products, new JsonSerializerOptions { WriteIndented = true });
-        await File.WriteAllTextAsync(_filePath, json);
+        try
+        {
+            // Asegura que el directorio existe
+            var directory = Path.GetDirectoryName(_filePath);
+            if (!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
+                Directory.CreateDirectory(directory);
+
+            var json = JsonSerializer.Serialize(products, new JsonSerializerOptions { WriteIndented = true });
+            await File.WriteAllTextAsync(_filePath, json);
+            return _filePath;
+        }
+        catch (Exception ex)
+        {
+            throw new IOException($"Error saving products to file: {_filePath}", ex);
+        }
     }
 }

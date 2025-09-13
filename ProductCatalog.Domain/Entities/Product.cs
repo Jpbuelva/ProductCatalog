@@ -1,4 +1,6 @@
-﻿namespace ProductCatalog.Domain.Entities;
+﻿using System.Text.Json.Serialization;
+
+namespace ProductCatalog.Domain.Entities;
 
 public class Product
 {
@@ -10,15 +12,32 @@ public class Product
     public string Category { get; private set; } = string.Empty;
     public DateTime CreatedAt { get; private set; }
 
-    public Product(string name, string description, decimal price, int stock, string category)
+    public Product() { }
+
+    [JsonConstructor]
+    public Product(Guid id, string name, string description, decimal price, int stock, string category, DateTime createdAt)
     {
-        Id = Guid.NewGuid();
+        Id = id;
         Name = name;
         Description = description;
         Price = price;
         Stock = stock;
         Category = category;
-        CreatedAt = DateTime.UtcNow;
+        CreatedAt = createdAt;
+    }
+
+    public static Product Create(string name, string description, decimal price, int stock, string category)
+    {
+        return new Product
+        {
+            Id = Guid.NewGuid(),
+            Name = name,
+            Description = description,
+            Price = price,
+            Stock = stock,
+            Category = category,
+            CreatedAt = DateTime.UtcNow
+        };
     }
 
     public void UpdateDetails(string name, string description, decimal price, string category)
