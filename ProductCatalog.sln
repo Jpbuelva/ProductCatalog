@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36414.22 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog.Api", "ProductCatalog.Api\ProductCatalog.Api.csproj", "{BB480529-09EC-45BC-AF7F-47937D59C9FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog.Application", "ProductCatalog.Application\ProductCatalog.Application.csproj", "{04CC08EF-5BF4-4244-A3A1-B3F699DBE53A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog.Domain", "ProductCatalog.Domain\ProductCatalog.Domain.csproj", "{A098E137-CF20-4FEC-B1FE-2AB77E8BFE0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog.Infrastructure", "ProductCatalog.Infrastructure\ProductCatalog.Infrastructure.csproj", "{46B1E7EB-B402-4A45-8D49-52CB1380E594}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{073CA73D-7CB9-4C33-9280-84D79BA9606F}"
+	ProjectSection(SolutionItems) = preProject
+		prompts.md = prompts.md
+		README.md = README.md
+		run.md = run.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog.Tests", "ProductCatalog.Tests\ProductCatalog.Tests.csproj", "{40000F7B-6D1D-443F-A6BA-48DB896680BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB480529-09EC-45BC-AF7F-47937D59C9FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB480529-09EC-45BC-AF7F-47937D59C9FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB480529-09EC-45BC-AF7F-47937D59C9FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB480529-09EC-45BC-AF7F-47937D59C9FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04CC08EF-5BF4-4244-A3A1-B3F699DBE53A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04CC08EF-5BF4-4244-A3A1-B3F699DBE53A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04CC08EF-5BF4-4244-A3A1-B3F699DBE53A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04CC08EF-5BF4-4244-A3A1-B3F699DBE53A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A098E137-CF20-4FEC-B1FE-2AB77E8BFE0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A098E137-CF20-4FEC-B1FE-2AB77E8BFE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A098E137-CF20-4FEC-B1FE-2AB77E8BFE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A098E137-CF20-4FEC-B1FE-2AB77E8BFE0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46B1E7EB-B402-4A45-8D49-52CB1380E594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46B1E7EB-B402-4A45-8D49-52CB1380E594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46B1E7EB-B402-4A45-8D49-52CB1380E594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46B1E7EB-B402-4A45-8D49-52CB1380E594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40000F7B-6D1D-443F-A6BA-48DB896680BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40000F7B-6D1D-443F-A6BA-48DB896680BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40000F7B-6D1D-443F-A6BA-48DB896680BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40000F7B-6D1D-443F-A6BA-48DB896680BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BB480529-09EC-45BC-AF7F-47937D59C9FA} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{04CC08EF-5BF4-4244-A3A1-B3F699DBE53A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{A098E137-CF20-4FEC-B1FE-2AB77E8BFE0F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{46B1E7EB-B402-4A45-8D49-52CB1380E594} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{40000F7B-6D1D-443F-A6BA-48DB896680BC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F039D225-DC7C-41EE-A2FC-742465F7EE75}
+	EndGlobalSection
+EndGlobal
